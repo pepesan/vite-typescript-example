@@ -7,6 +7,7 @@ export function clases() {
     }
 
     let kv1: KeyPair = { key:1, value:"Steve" }; // OK
+    console.log(kv1.key);
 
     class Employee {
         empCode: number;
@@ -44,17 +45,19 @@ export function clases() {
             this.empCode = empcode;
         }
 
-        displayName():void {
-            console.log("Name = " + this.name +  ", Employee Code = " + this.empCode);
+        displayName(): string {
+            let value = "Name = " + this.name +  ", Employee Code = " + this.empCode;
+            console.log(value);
+            return value;
         }
     }
 
-    let emp = new Employee2(100, "Bill");
+    let emp: Employee2 = new Employee2(100, "Bill");
     console.log("Empleado displayName: " + emp.displayName()); // Name = Bill, Employee Code = 100
 
     interface IPerson {
         name: string;
-        display():void;
+        display():string;
     }
 
     interface IEmployee {
@@ -72,8 +75,10 @@ export function clases() {
             this.name = name;
         }
 
-        display(): void {
-            console.log("Name = " + this.name +  ", Employee Code = " + this.empCode);
+        display(): string {
+            let value: string = "Name = " + this.name +  ", Employee Code = " + this.empCode
+            console.log(value);
+            return value;
         }
     }
 
@@ -119,8 +124,8 @@ export function clases() {
         }
     }
 
-    let mercObj = new Mercedes("Mercedes-Benz GLA");
-    let hondaObj = new Honda("Honda City")
+    let mercObj: Mercedes = new Mercedes("Mercedes-Benz GLA");
+    let hondaObj: Honda = new Honda("Honda City")
 
     mercObj.run();  // A Mercedes started A Mercedes-Benz GLA is moving at 150 mph!
     hondaObj.run(); // A Honda started A Honda City is moving at 100 mph!
@@ -162,7 +167,7 @@ export function clases() {
     let emp2: Person = emp4.find('Steve');
     console.log(emp2);
     /*
-    Modificadores de acceso
+        Modificadores de acceso
      */
     class Employee5 {
         public empName: string;
@@ -181,10 +186,19 @@ export function clases() {
             super(name, code);
             this.department = department;
         }
+
+        getDepartment(): string{
+            return this.department;
+        }
+
+        setDepartment(department: string){
+            this.department = department;
+        }
     }
 
-    let emp5 = new SalesEmployee("John Smith", 123, "Sales");
-
+    let emp5: SalesEmployee = new SalesEmployee("John Smith", 123, "Sales");
+    emp5.setDepartment("Sales");
+    console.log(emp5.getDepartment());
 
     class Employee6 {
         readonly empCode: number;
@@ -195,20 +209,25 @@ export function clases() {
             this.empName = name;
         }
     }
-    let emp6 = new Employee6(10, "John");
-
+    let emp6: Employee6 = new Employee6(10, "John");
+    console.log(emp6.empCode)
+    // no puedo
+    // em6.empCode = 6
+    // sí puedo
+    emp6.empName = "Mar"
+    console.log(emp6.empName)
     /*
     Miembros estáticos
      */
     class Circle {
-        static pi: number = 3.14;
+        static PI: number = 3.14;
 
         static calculateArea(radius:number) {
-            return this.pi * radius * radius;
+            return this.PI * radius * radius;
         }
     }
-    Circle.pi; // returns 3.14
+    console.log(Circle.PI); // returns 3.14
     Circle.calculateArea(5); // returns 78.5
     // Solo lectura readonly
-    Math.PI;
+    console.log(Math.PI);
 }
