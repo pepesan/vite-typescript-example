@@ -9,6 +9,7 @@ import {clases} from "./modulos/clases.ts";
 import {genericos} from "./modulos/generics.ts";
 import {tipos} from "./modulos/tipos.ts";
 import {arrays} from "./modulos/arrays.ts";
+import {ejerciciosClases} from "./ejercicios/clases.ts";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -43,3 +44,6 @@ funciones();
 clases();
 // Ejemplos de Genericos
 genericos()
+
+// Ejercicios
+ejerciciosClases();

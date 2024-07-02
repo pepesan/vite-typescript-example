@@ -8,8 +8,8 @@ export function genericos() {
         return new Array().concat(items);
     }
 
-    var myNumArr = getArray([100, 200, 300]);
-    var myStrArr = getArray(["Hello", "World"]);
+    var myNumArr: any[] = getArray([100, 200, 300]);
+    var myStrArr: any[] = getArray(["Hello", "World"]);
 
     myNumArr.push(400); // OK
     myStrArr.push("Hello TypeScript"); // OK
@@ -63,6 +63,31 @@ export function genericos() {
     }
     var per = new Person("Bill", "Gates");
     display(per); //Output: Bill Gates
+
+    class Listado<T>{
+        private _listado: T[]
+
+
+        constructor(listado: T[]) {
+            this._listado = listado;
+        }
+
+
+        get listado(): T[] {
+            return this._listado;
+        }
+
+        set listado(value: T[]) {
+            this._listado = value;
+        }
+
+        display(): string {
+            return "Listado["+this._listado.join(",")+ "]";
+        }
+    }
+
+    var miListado: Listado<string> = new Listado(["uno", "dos"])
+    console.log(miListado.display());
 
     class KeyValuePair<T,U>
     {
