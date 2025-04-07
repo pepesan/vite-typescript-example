@@ -10,6 +10,7 @@ import {genericos} from "./modulos/generics.ts";
 import {tipos} from "./modulos/tipos.ts";
 import {arrays} from "./modulos/arrays.ts";
 import {ejerciciosClases} from "./ejercicios/clases.ts";
+import {ejercicios} from "./ejercicios/ejercicios.ts";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -24,6 +25,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <button id="counter" type="button"></button>
     </div>
     <p class="read-the-docs">
+      Click on the Vite and TypeScript logos to learn more
+    </p>
+    <p id="resultados">
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
@@ -46,4 +50,5 @@ clases();
 genericos()
 
 // Ejercicios
+ejercicios(document.querySelector("#resultados"));
 ejerciciosClases();
