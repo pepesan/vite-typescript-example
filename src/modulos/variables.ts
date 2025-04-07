@@ -22,7 +22,7 @@ export function variables(){
     console.log("color: "+ color);
     enum ColorEstablecido{
         Verde=0, Rojo=1, Azul=2    }
-    let color2: ColorEstablecido= Color.Azul;
+    let color2: ColorEstablecido= ColorEstablecido.Azul;
     console.log("color2: "+ color2);
 
     const variable: any = 11;

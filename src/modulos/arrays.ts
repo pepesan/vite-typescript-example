@@ -6,22 +6,22 @@ export function arrays(){
     console.log(arr);
 
     // definición de array
-    var arr: number[] = [10, 20, 30, 40];
-    console.log(arr);
+    var arr2: number[] = [10, 20, 30, 40];
+    console.log(arr2);
 
     // definición de array
-    var arr: string[] = ["uno", "dos"];
-    console.log(arr);
+    var arr3: string[] = ["uno", "dos"];
+    console.log(arr3);
 
     // tamaño del array
-    console.log(arr.length)
+    console.log(arr3.length)
 
     // acceso a datos en el array
-    console.log(arr[0]);
-    arr[0] ="Cero";
+    console.log(arr3[0]);
+    arr3[0] ="Cero";
 
     // meter dato
-    arr.push("Tres")
+    arr3.push("Tres")
     console.log(arr);
 
 }
