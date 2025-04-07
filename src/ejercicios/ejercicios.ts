@@ -69,4 +69,46 @@ export function ejercicios(element: HTMLParagraphElement):void{
         console.error("Error al acceder a LocalStorage:", error);
     }
 
+
+    // 1. Función que imprime un valor por consola
+    function printValue(value: any): void {
+        console.log(value);
+    }
+
+    // 2. Función que suma dos valores e imprime el resultado por consola
+    function sumAndPrint(a: number, b: number): void {
+        console.log(a + b);
+    }
+
+    // 3. Función que suma dos valores y devuelve el resultado
+    function sum(a: number, b: number): number {
+        return a + b;
+    }
+
+    // 4. Función que suma dos valores, ambos opcionales, y devuelve el resultado
+    // Se usa el operador nullish (??) para tratar los valores no definidos como 0.
+    function sumOptional(a?: number, b?: number): number {
+        return (a ?? 0) + (b ?? 0);
+    }
+
+    // 5. Función que suma dos valores, con valores por defecto, y devuelve el resultado
+    // Los parámetros tienen valores por defecto asignados (0 en este caso).
+    function sumDefault(a: number = 0, b: number = 0): number {
+        return a + b;
+    }
+
+    // 6. Función que admite un número indeterminado de parámetros de tipo string y devuelve su concatenación
+    function concatStrings(...strings: string[]): string {
+        return strings.join('');
+    }
+
+    // Ejemplos de uso:
+    printValue("Hola Mundo");
+    sumAndPrint(5, 7);
+    console.log("Suma:", sum(10, 15));
+    console.log("Suma opcional:", sumOptional(8));
+    console.log("Suma con valores por defecto:", sumDefault());
+    console.log("Concatenación:", concatStrings("Type", "Script", " es ", "genial"));
+
+
 }

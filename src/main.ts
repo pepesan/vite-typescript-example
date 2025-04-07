@@ -50,5 +50,5 @@ clases();
 genericos()
 
 // Ejercicios
-ejercicios(document.querySelector("#resultados"));
+ejercicios(document.querySelector<HTMLParagraphElement>("#resultados"));
 ejerciciosClases();

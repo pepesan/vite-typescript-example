@@ -26,7 +26,7 @@ export function genericos() {
 
     myNumArr.push(400); // OK
     myStrArr.push("Hello TypeScript"); // OK
-
+    // myNumArr.push("Hello TypeScript"); // Not OK
     /*
     Genéricas con dos tipos
      */

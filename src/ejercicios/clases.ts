@@ -68,6 +68,44 @@ export function ejerciciosClases(): void{
     fluky.nombre = "Flucky";
     fluky.raza = "Pastor de Aguas";
     console.log(fluky.display());
+
+    class Mapa<K, V> {
+        private data: Map<K, V>;
+
+        // Función constructora
+        constructor() {
+            this.data = new Map<K, V>();
+        }
+
+        // Función add: agrega o actualiza un par clave-valor
+        add(clave: K, valor: V): void {
+            this.data.set(clave, valor);
+        }
+
+        // Función borrar: elimina la entrada asociada a la clave
+        borrar(clave: K): boolean {
+            return this.data.delete(clave);
+        }
+
+        // Función display: muestra todas las entradas del mapa por consola
+        display(): void {
+            this.data.forEach((valor, clave) => {
+                console.log(`Clave: ${clave} -> Valor: ${valor}`);
+            });
+        }
+    }
+
+    // Ejemplo de uso:
+    const miMapa = new Mapa<number, string>();
+    miMapa.add(1, "Uno");
+    miMapa.add(2, "Dos");
+    console.log("Mapa inicial:");
+    miMapa.display();
+
+    miMapa.borrar(1);
+    console.log("Después de borrar la clave 1:");
+    miMapa.display();
+
 }
 
 
