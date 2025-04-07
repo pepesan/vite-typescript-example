@@ -10,7 +10,7 @@ export function ejercicios(element: HTMLParagraphElement):void{
     var i: number = 1;
     var j: number = 2;
     var k: number = i+j;
-    element.innerHTML = element.innerHTML + "suma: " + k;
+    element.innerHTML = element.innerHTML + ", suma: " + k;
     // Declara dos variables con var y let y una constante con const
     var var1: number = 0;
     let var2: number = 0;
@@ -46,4 +46,27 @@ export function ejercicios(element: HTMLParagraphElement):void{
 
         console.log(arr[index]); // prints elements: 10, 20, 30, 40, 50
     }
+    // Guarda un dato en LocalStorage y recupéralo, comprueba con try catch que no tienes ningún error, y presenta el valor por pantalla
+    try {
+        // Almacenar un dato en el LocalStorage
+        localStorage.setItem("dato", "valor de prueba");
+
+        // Recuperar el dato del LocalStorage
+        const valorRecuperado = localStorage.getItem("dato");
+
+        // Verificar que se haya obtenido un valor
+        if (valorRecuperado !== null) {
+            // Mostrar el valor en la consola
+            console.log("Valor recuperado:", valorRecuperado);
+
+            // También se puede mostrar el valor en la pantalla, por ejemplo, en el body del documento
+            element.innerHTML = element.innerHTML + `, Valor recuperado: ${valorRecuperado}`;
+        } else {
+            console.log("No se encontró ningún dato en LocalStorage.");
+        }
+    } catch (error) {
+        // Capturar y mostrar cualquier error que pueda ocurrir
+        console.error("Error al acceder a LocalStorage:", error);
+    }
+
 }
