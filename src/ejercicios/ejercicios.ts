@@ -41,7 +41,7 @@ export function ejercicios(element: HTMLParagraphElement | null):void{
             i++;
         }while (i < arr.length);
 
-        for (let val of arr) {
+        for (let val: number of arr) {
             console.log(val); // prints values: 10, 20, 30, 40
         }
 
