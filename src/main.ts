@@ -9,9 +9,8 @@ import {estructuras} from "./modulos/estructuras.ts";
 import {funciones} from "./modulos/funciones.ts";
 import {clases} from "./modulos/clases.ts";
 import {genericos} from "./modulos/generics.ts";
-
-import {ejerciciosClases} from "./ejercicios/clases.ts";
 import {ejercicios} from "./ejercicios/ejercicios.ts";
+import {ejerciciosClases} from "./ejercicios/clases.ts";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

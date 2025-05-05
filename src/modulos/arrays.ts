@@ -2,7 +2,7 @@ export function arrays(){
     // ejemplos de arrays
     console.log("Ejemplos de Arrays")
     // definición de array
-    var arr = [10, 20, 30, 40];
+    var arr: number[] = [10, 20, 30, 40];
     console.log(arr);
 
     // definición de array
@@ -22,6 +22,6 @@ export function arrays(){
 
     // meter dato
     arr3.push("Tres")
-    console.log(arr);
+    console.log(arr3);
 
 }

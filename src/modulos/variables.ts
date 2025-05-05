@@ -11,6 +11,7 @@ export function variables(){
     const constante: string = "Valor";
     console.log(constante);
 
+    // definición de un array
     let ciudades: string[] = ["cuenca", "salamanca"];
 
     console.log("Ciudad [0]: " + ciudades[0]);
@@ -21,7 +22,8 @@ export function variables(){
     let color: Color= Color.Azul;
     console.log("color: "+ color);
     enum ColorEstablecido{
-        Verde=0, Rojo=1, Azul=2    }
+        Verde=0, Rojo=1, Azul=2
+    }
     let color2: ColorEstablecido= ColorEstablecido.Azul;
     console.log("color2: "+ color2);
 

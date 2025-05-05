@@ -86,7 +86,7 @@ export function genericos() {
         }
     }
 
-    var miListado: Listado<string> = new Listado(["uno", "dos"])
+    var miListado: Listado<string> = new Listado<string>(["uno", "dos"])
     console.log(miListado.display());
 
     class KeyValuePair<T,U>

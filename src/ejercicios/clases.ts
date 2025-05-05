@@ -61,6 +61,7 @@ export function ejerciciosClases(): void{
     let nyska: Perro = new Perro();
     console.log(nyska);
     nyska.nombre = "Nyska";
+    console.log(nyska.nombre);
     nyska.raza = "Podenco Mediano";
     console.log(nyska.display());
     let fluky: Perro = new Perro();
