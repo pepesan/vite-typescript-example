@@ -3,6 +3,10 @@ export function tipos(){
 
     // tipos de datos básicos
     console.log("Ejemplos de tipos");
+
+    // tipo null
+    var nulo = null;
+    console.log(nulo);
     // cadenas
     var cadena = "Hola"
     console.log(cadena);
@@ -18,8 +22,8 @@ export function tipos(){
 
     // Tipos definidos con tipo
 
-    var cadena: string = "Hola"
-    var numero: number = 2;
-    var booleano: boolean = true;
+    var cadena2: string = "Hola"
+    var numero3: number = 2;
+    var booleano2: boolean = true;
 
 }
