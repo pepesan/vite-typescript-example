@@ -22,10 +22,18 @@ export function clases() {
             return 10000;
         }
     }
+    // inicializando un objeto
     let empleado = new Employee();
+    // por defecto el constructor inicializa a 0 los dos atributos
     empleado.empCode=27;
     console.log("Empleado Code: " + empleado.empCode);
-
+    // el constructor inicializa un valor y el otro por defecto
+    let employee2 = new Employee(100);
+    console.log("Empleado Code: " + employee2.empCode);
+    // el constructor inicializa los dos valores con los argumentos
+    let employee3 = new Employee(100, "Steve");
+    console.log("Empleado Code: " + employee3.empCode);
+    console.log("Empleado Name: " + employee3.empName);
     /*
     Herencia
      */
