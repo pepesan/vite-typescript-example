@@ -28,7 +28,7 @@ export function genericos() {
     myStrArr.push("Hello TypeScript"); // OK
     // myNumArr.push("Hello TypeScript"); // Not OK
     /*
-    Genéricas con dos tipos
+        Genéricas con dos tipos
      */
     function displayType<T, U>(id:T, name:U): void {
         console.log(typeof(id) + ", " + typeof(name));
