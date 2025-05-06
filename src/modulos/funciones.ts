@@ -32,6 +32,13 @@ export function funciones() {
     Greet3("Hello", "Steve", "Bill"); // returns "Hello Steve, Bill!"
 
     Greet3("Hello");// returns "Hello !"
+
+    function Greet4(greeting: string, ...names: any[]) {
+        return greeting + " " + names.join(", ") + "!";
+    }
+
+    Greet4("Hello");// returns "Hello !"
+    Greet4("Hello", 2);// returns "Hello !"
     /*
     Arrow Function
      */

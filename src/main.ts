@@ -4,11 +4,11 @@ import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 import {variables} from "./modulos/variables.ts";
 import {tipos} from "./modulos/tipos.ts";
+import {arrays} from "./modulos/arrays.ts";
 import {estructuras} from "./modulos/estructuras.ts";
 import {funciones} from "./modulos/funciones.ts";
 import {clases} from "./modulos/clases.ts";
 import {genericos} from "./modulos/generics.ts";
-import {arrays} from "./modulos/arrays.ts";
 import {ejercicios} from "./ejercicios/ejercicios.ts";
 import {ejerciciosClases} from "./ejercicios/ejerciciosClases.ts";
 

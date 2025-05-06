@@ -3,6 +3,10 @@ export function tipos(){
 
     // tipos de datos básicos
     console.log("Ejemplos de tipos");
+
+    // tipo null
+    var nulo = null;
+    console.log(nulo);
     // cadenas
     var cadena: string = "Hola";
     console.log(cadena);
